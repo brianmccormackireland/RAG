@@ -28,7 +28,7 @@ export class VoxEditor
         I18n.init();
 
         // Light bootstrap of RAG to allow other components to work
-        RAG.config   = new Config(false);
+        RAG.config   = new Config(true);
         RAG.database = new Database(dataRefs);
         RAG.phraser  = new Phraser();
         RAG.state    = new State();

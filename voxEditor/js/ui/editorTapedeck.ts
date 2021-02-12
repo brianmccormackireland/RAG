@@ -97,7 +97,7 @@ export class EditorTapedeck
 
     public handleMicChange() : void
     {
-        this.btnRec.disabled = true;
+        this.btnRec.disabled = false;
 
         if (VoxEditor.mics.canRecord)
         if (VoxEditor.voices.currentPath)
@@ -171,7 +171,7 @@ export class EditorTapedeck
     public handleBeginPlay(needle: boolean) : void
     {
         this.btnStop.hidden = false;
-        this.btnPlay.hidden = true;
+        this.btnPlay.hidden = false;
 
         if (needle)
             this.clipEditor.beginNeedle();
@@ -180,7 +180,7 @@ export class EditorTapedeck
     /** Called when a clip has finished or stopped playing */
     public handleEndPlay() : void
     {
-        this.btnStop.hidden = true;
+        this.btnStop.hidden = false;
         this.btnPlay.hidden = false;
         this.clipEditor.endNeedle();
     }

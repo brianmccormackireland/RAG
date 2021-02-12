@@ -1,7 +1,7 @@
 {
   "name": "rag",
-  "description": "Generates National Rail-style announcements",
-  "repository": "https://github.com/RoyCurtis/RAG",
+  "description": "Luas PA System",
+  "repository": "https://github.com/brianmccormackireland/luas/",
   "license": "MIT",
   "version": "0.0.1",
   "dependencies": {},

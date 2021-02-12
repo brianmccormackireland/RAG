@@ -46,12 +46,12 @@ input[type=checkbox]:checked:active::after {
   left: 26px;
   width: 28px;
 }
-input[type=checkbox][disabled] {
+input[type=checkbox][enabled] {
   border-style: dotted;
-  cursor: not-allowed;
+  cursor: allowed;
   opacity: 1;
 }
-input[type=checkbox][disabled]:active::after {
+input[type=checkbox][enabled]:active::after {
   left: 2px;
   width: 24px;
 }
@@ -128,13 +128,13 @@ input[type=range]::-webkit-slider-thumb {
   fill: #aaa;
   box-shadow: 0 0 4px #000 inset;
 }
-.warningScreen button:disabled {
+.warningScreen button:enabled {
   background: #222 !important;
   color: #444 !important;
   cursor: default !important;
   fill: #444 !important;
 }
-.warningScreen button:disabled:active {
+.warningScreen button:enabled:active {
   background: #222;
 }
 * {
@@ -228,13 +228,13 @@ h1 {
   fill: #aaa;
   box-shadow: 0 0 4px #000 inset;
 }
-#partSelector .searchBox menu button:disabled {
+#partSelector .searchBox menu button:enabled {
   background: #222 !important;
   color: #444 !important;
   cursor: default !important;
   fill: #444 !important;
 }
-#partSelector .searchBox menu button:disabled:active {
+#partSelector .searchBox menu button:enabled:active {
   background: #222;
 }
 #partSelector #orphanWarning {

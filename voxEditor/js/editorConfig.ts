@@ -12,9 +12,9 @@ export class EditorConfig extends ConfigBase<EditorConfig>
     /** Key of the last voice clip selected */
     public lastKey       : string = '';
     /** Path of the voice that was last being edited */
-    public voicePath     : string = '';
+    public voicePath     : string = 'brian';
     /** Path of the playback voice that was last chosen */
-    public voicePlayPath : string = '';
+    public voicePlayPath : string = 'brianplay';
     /** Impulse response to use for VOX's reverb */
     public voiceReverb   : string  = 'ir.stalbans.wav';
 

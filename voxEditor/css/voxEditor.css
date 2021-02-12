@@ -339,13 +339,13 @@ h1 {
   fill: #aaa;
   box-shadow: 0 0 4px #000 inset;
 }
-#tapeDeck #frmTapedeck menu button:disabled {
+#tapeDeck #frmTapedeck menu button:enabled {
   background: #222 !important;
   color: #444 !important;
   cursor: default !important;
   fill: #444 !important;
 }
-#tapeDeck #frmTapedeck menu button:disabled:active {
+#tapeDeck #frmTapedeck menu button:enabled:active {
   background: #222;
 }
 #tapeDeck #frmTapedeck menu button svg {

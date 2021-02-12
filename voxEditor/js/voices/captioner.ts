@@ -22,7 +22,7 @@ export class Captioner
     public constructor()
     {
         // Note that the captioner should generate IDs the same way that the Resolver
-        // does, in RAG/vox/resolver.ts. Else, voice will not match text content.
+        // does, in LUAS/vox/resolver.ts. Else, voice will not match text content.
 
         this.populateLetters();
         this.populateNumbers();
@@ -51,7 +51,7 @@ export class Captioner
     private populateNumbers() : void
     {
         // Get all suffixes. End inflection only, for now
-        let suffixes = RAG.database.phrasesets.querySelectorAll(
+        let suffixes = LUAS.database.phrasesets.querySelectorAll(
             'integer[singular], integer[plural]'
         );
 
@@ -112,7 +112,7 @@ export class Captioner
     private populateExcuses() : void
     {
         // Both middle and end inflections needed
-        RAG.database.excuses.forEach(excuse =>
+        LUAS.database.excuses.forEach(excuse =>
         {
             let key = Strings.filename(excuse);
 
@@ -125,7 +125,7 @@ export class Captioner
     private populatePhrasesets() : void
     {
         let treeWalker = document.createTreeWalker(
-            RAG.database.phrasesets,
+            LUAS.database.phrasesets,
             NodeFilter.SHOW_TEXT,
             { acceptNode: Captioner.filterText },
             false
@@ -169,7 +169,7 @@ export class Captioner
 
     private populateNames() : void
     {
-        RAG.database.named.forEach(name =>
+        LUAS.database.named.forEach(name =>
         {
             let key = Strings.filename(name);
             this.captionBank[`named.${key}.mid`] = name;
@@ -178,7 +178,7 @@ export class Captioner
 
     private populateServices() : void
     {
-        RAG.database.services.forEach(service =>
+        LUAS.database.services.forEach(service =>
         {
             let key = Strings.filename(service);
             this.captionBank[`service.${key}.mid`] = service;
@@ -187,7 +187,7 @@ export class Captioner
 
     private populateStations() : void
     {
-        let stations = RAG.database.stations;
+        let stations = LUAS.database.stations;
         let keys     = Object.keys(stations);
 
         // For the "and" in station lists
@@ -198,8 +198,8 @@ export class Captioner
 
         keys.forEach(code =>
         {
-            let name   = RAG.database.getStation(code);
-            let voxKey = RAG.database.getStationVox(code);
+            let name   = LUAS.database.getStation(code);
+            let voxKey = LUAS.database.getStationVox(code);
 
             // Skip stations with aliased vox keys
             if (code !== voxKey)

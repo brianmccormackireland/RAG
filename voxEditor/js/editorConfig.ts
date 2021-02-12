@@ -18,7 +18,7 @@ export class EditorConfig extends ConfigBase<EditorConfig>
     /** Impulse response to use for VOX's reverb */
     public voiceReverb   : string  = 'ir.stalbans.wav';
 
-    public constructor(autoLoad: boolean = false)
+    public constructor(autoLoad: boolean = true)
     {
         super(EditorConfig);
 

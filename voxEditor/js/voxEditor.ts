@@ -27,11 +27,11 @@ export class VoxEditor
 
         I18n.init();
 
-        // Light bootstrap of RAG to allow other components to work
-        RAG.config   = new Config(true);
-        RAG.database = new Database(dataRefs);
-        RAG.phraser  = new Phraser();
-        RAG.state    = new State();
+        // Light bootstrap of LUAS to allow other components to work
+        LUAS.config   = new Config(true);
+        LUAS.database = new Database(dataRefs);
+        LUAS.phraser  = new Phraser();
+        LUAS.state    = new State();
 
         VoxEditor.config    = new EditorConfig(true);
         VoxEditor.captioner = new Captioner();
